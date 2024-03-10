@@ -3,7 +3,6 @@ import {Line} from 'react-chartjs-2';
 import {Col, Row, Typography,} from 'antd';
 import Chart from 'chart.js/auto';
 
-
 export default function LineChart({coinHistory, currentPrice, coinName}) {
 
    
@@ -14,6 +13,7 @@ export default function LineChart({coinHistory, currentPrice, coinName}) {
         coinPrice.push(coinHistory.data.data.history[i].price)
         coinTimestamp.push(new Date(coinHistory.data.data.history[i].timestamp).toLocaleDateString());
     }
+    console.log(coinTimestamp);
     
 
     

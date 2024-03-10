@@ -14,10 +14,10 @@ export default function News({ simplified }) {
   const [newsCategory, setnewsCategory] = useState('Cryptocurrency')
   const { data } = useGetCryptosQuery(100);
 
-  const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory: newsCategory, count: simplified ? 6 : 10 })
+  const { data: cryptoNews } = useGetCryptoNewsQuery()
 
-  
-  if (!cryptoNews?.value) return <div style={{ display: "flex", justifyContent: "center" }}>
+  console.log(cryptoNews)
+  if (!cryptoNews?.data) return <div style={{ display: "flex", justifyContent: "center" }}>
 
     <Loader />
   </div>;
@@ -47,14 +47,14 @@ export default function News({ simplified }) {
         </Col>
       }
 
-      {cryptoNews.value.map((news, index) => (
+      {cryptoNews.data.map((news, index) => (
         <Col xs={24} sm={12} lg={8} key={index}>
 
           <Card hoverable className='news-card'>
             <a href={news.url} target="_blank" rel="noreferrer">
               <div className="news-image-container" style={{ display: "flex" }}>
-                <Title className="news-title" level={4}>{news.name} </Title>
-                <img src={news?.image?.thumbnail?.contentUrl || demoimage} alt="news" style={{ height: "100px", width: "130px", margin: "15px" }} />
+                <Title className="news-title" level={4}>{news.title} </Title>
+                <img src={news?.thumbnail?.contentUrl || demoimage} alt="news" style={{ height: "100px", width: "130px", margin: "15px" }} />
               </div>
               <p style={{ color: "black", padding: "10px 10px 10px 0px" }}>
                 {news.description.length > 100
@@ -64,9 +64,9 @@ export default function News({ simplified }) {
               </p>
               <div className="provider-container">
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoimage} alt="news" />
-                  <Text className='provider-name' style={{paddingLeft:"5px"}}>{news.provider[0]?.name}</Text>
-                  <Text style={{ position: 'absolute', right: "10px" }}>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
+                  {/* <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoimage} alt="news" />
+                  <Text className='provider-name' style={{paddingLeft:"5px"}}>{news.provider[0]?.name}</Text> */}
+                  <Text style={{ position: 'absolute', right: "10px" }}>{moment(news.createdAt).startOf('ss').fromNow()}</Text>
                 </div>
               </div>
             </a>

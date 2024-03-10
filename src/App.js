@@ -19,6 +19,8 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Watchlist from './components/Watchlist';
 import Footer from './components/Footer';
+import Settings from './components/Settings';
+import HelpAndSupport from './components/Help and support';
 
 
 
@@ -42,6 +44,8 @@ function App() {
                   element={<><Cryptocurrency /></>} />
                 <Route path="/news"
                   element={<><News /></>} />
+                <Route path="/settings"
+                  element={<><Settings /></>} />
                 <Route path="/cryptocurrency/:coinId"
                   element={<><CryptoDetails /></>} />
                 <Route path="/login"
@@ -50,6 +54,8 @@ function App() {
                   element={<><Signup /></>} />
                 <Route path="/cryptocurrency/watchlist"
                   element={<><Watchlist /></>} />
+                <Route path="/support"
+                  element={<><HelpAndSupport/></>} />
 
               </Routes>
               <Footer />

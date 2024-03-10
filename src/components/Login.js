@@ -48,7 +48,7 @@ export default function Login(props) {
   return (
     <div className="container_login">
         <div id="contain">
-            <h2>Login to your Cryptoverse</h2>
+            <h2>Login to your Cryptocompass</h2>
             <hr id="line"/>
             <div className="myform">
                 <form onSubmit={handleSubmit}>

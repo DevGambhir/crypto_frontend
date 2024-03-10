@@ -10,11 +10,11 @@ export default function Footer() {
                 <ul className="nav border-bottom pb-3 mb-3" style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
                     <li className="nav-item"><Link to="/" className="nav-link px-2 text-muted">This is a demo version of website.</Link></li>
 
-                    <li className="nav-item"><Link to="/" className="nav-link px-2 text-muted">Made by Aryan Kumar.</Link></li>
+                    <li className="nav-item"><Link to="/" className="nav-link px-2 text-muted">Made by Dev, Venkat and Balaji.</Link></li>
 
                 </ul>
 
-                <p className="text-center text-muted">&copy; 2022 Company, Inc</p>
+                <p className="text-center text-muted">&copy; 2024 Christ</p>
             </footer>
         </div>
     )

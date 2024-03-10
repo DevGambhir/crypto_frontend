@@ -22,9 +22,6 @@ export default function Alert(props) {
                 <strong>{captialize(props.alert.header)}</strong> : <strong>{props.alert.msg}</strong>
                 
             </div>}
-            
-
-           
         </div>
     )
 }

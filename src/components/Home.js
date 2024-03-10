@@ -91,6 +91,10 @@ export default function Home() {
         </div>
         <News simplified={true}/>
 
+        <div className="settings">
+            <h2 style={{padding:"10px 0px 0px 20px"}}></h2>
+        </div>
+
       
     </div>
     </>
