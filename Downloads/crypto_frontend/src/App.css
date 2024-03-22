@@ -1,0 +1,33 @@
+@media only screen and (max-width:395px){
+
+    
+    .sidebar{
+        display: none;
+        
+    }
+
+    .shorttable{
+        margin-right: 20px;
+    }
+    .footer{
+        display: none;
+    }
+    .displayRight{
+        margin-left:16px
+    }
+    .Dhidden{
+        display: block;
+
+    }
+}
+
+@media only screen and (min-width:395px){
+
+    .Dhidden{
+        display: none;
+
+    }
+
+
+}
+
